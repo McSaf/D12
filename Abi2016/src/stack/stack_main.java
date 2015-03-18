@@ -4,7 +4,7 @@ public class stack_main {
     
     public static void main(String[] args) {
         
-        
+        stack mainStack = new stack();
         
     }
     
