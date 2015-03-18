@@ -44,7 +44,7 @@ public class stack {
 
     }
 
-    Object getData() {
+    Object top() {
 
         if (!isEmpty()) {
             return first.data;
