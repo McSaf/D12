@@ -11,9 +11,9 @@ public class stack_main {
         mainStack.push((String)"Hello World4");
         
         
-        while(mainStack.top() != null) {
+        while(mainStack.getData() != null) {
             
-            System.out.println((String)mainStack.top());
+            System.out.println((String)mainStack.getData());
             mainStack.pop();
             
         }
