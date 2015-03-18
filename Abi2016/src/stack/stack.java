@@ -21,7 +21,7 @@ public class stack {
         eintrag x = new eintrag();
         x.data = pObject;
 
-        if (!isEmpty()) {
+        if (isEmpty()) {
 
             first = x;
             last = x;
