@@ -127,6 +127,7 @@ public class liste_doppelt implements liste_doppelt_interface {
             prev.next.data = pObject;
             prev.next.previous = prev;
             prev.next.next = tmp;
+            //if (prev.next == first) {first = prev.next.next;}
             prev.next.next.previous = prev.next;
 
         } else if (!hasAccess() && pObject != null) {
