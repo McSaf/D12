@@ -10,19 +10,25 @@ public class stringsort_lexiko_main {
 
     public static void main(String[] args) {
 
+        // Erstes Element als Startpunkt in die Liste einspeichern
         mainList.append(data[0]);
         mainList.toFirst();
         
+        // Durchlaufen des Arrays mit den Input-Daten 
         for (int i = 1; i < data.length; i++) {
             
+            // Mit jedem Durchlauf wieder an den Anfang springen
             mainList.toFirst();
             
+            // Liste bis zu der Stelle an der der Input eingefügt werden muss durchlaufen
             while((mainList.getObject() != null) && stg.compareStrings((String)mainList.getObject(), data[i]) == 0) {
                 
                 mainList.next();
                 
             }
             
+            // Wenn Objekt mitten in der Liste, einfach einfügen
+            // Wenn Ende der Liste Objekt an Listenende anfügen.
             if (mainList.getObject() != null) {
                 mainList.insert(data[i]);
             } else {
@@ -31,6 +37,7 @@ public class stringsort_lexiko_main {
             
         }
         
+        // Schleife zum Ausgeben der Fertig sortierten Liste.
         mainList.toFirst();
         while(mainList.getObject() != null) {
             System.out.println(mainList.getObject());
